@@ -34,7 +34,8 @@ const lookup = {
 function rot13(Str) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
-      str.forEach((word,index)=>{
+	let str=str.split(" ");
+      str.map((word,index)=>{
 		  decodedArr[index]=lookup[word.index];
 	  })
 	decodedArr.join("");
