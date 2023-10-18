@@ -35,9 +35,14 @@ function rot13(Str) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
 	let str=str.split(" ");
+	for(let i=0; i<str.length; i++){
+		follow(str);
+	}
+	function follow(str){
       str.map((word,index)=>{
 		  decodedArr[index]=lookup[word.index];
 	  })
+	}
 	decodedArr.join("");
   return decodedArr; //return decodedArr
 }
